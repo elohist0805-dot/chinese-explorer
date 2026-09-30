@@ -36,3 +36,39 @@
 .game .soon{background:#eff2f7;box-shadow:inset 0 0 0 1px #dce4ec}
 @media(max-width:650px){.game .illustration{height:auto;aspect-ratio:2 / 1}.game h3{font-size:23px}}
 @media(prefers-reduced-motion:reduce){.game,.game .illustration .scene,.btn{transition:none!important;transform:none!important}}
+
+
+/* Visual direction v4: expansive illustrated portal, not a centered white placeholder panel */
+:root{--ink:#173755;--page:#fffaf0}
+body{background:radial-gradient(ellipse at 3% 55%,#f5e7c8 0,transparent 29%),radial-gradient(ellipse at 99% 68%,#e5efd8 0,transparent 33%),#fffaf0}
+.header{background:#ffffffee;box-shadow:0 2px 14px #2142631d}
+.brand{color:#203c5c;letter-spacing:.11em}
+.navigation nav a{transition:background .2s,color .2s}
+.navigation nav a:first-child{background:#dff2ff}
+.hero{min-height:540px;background:#b0e6fc url("./assets/adventure-hero-v2.svg") center center / cover no-repeat;isolation:isolate}
+.hero::before{display:block;content:"";position:absolute;inset:0;background:linear-gradient(90deg,#78bdeb00 0%,#e6f5e226 28%,#ffffff22 50%,#ffffff00 72%);border-radius:0;width:auto;height:auto;z-index:0}
+.hero::after{display:block;content:"";position:absolute;bottom:0;left:0;right:0;height:40px;width:auto;border-radius:0;background:linear-gradient(180deg,transparent,#254e4433);z-index:0}
+.hero-inner{min-height:540px;align-items:flex-start;justify-content:center}
+.hero-copy{position:relative;z-index:2;max-width:800px;margin:32px auto 0;padding:21px 24px 26px;border:0;border-radius:0;box-shadow:none;backdrop-filter:none;background:transparent}
+.eyebrow{display:inline-block;background:#fff7dfd9;border:1px solid #f4d398;color:#825e34;padding:7px 20px;border-radius:100px;box-shadow:0 3px 14px #fff8d7c9;font-size:13px;letter-spacing:.25em}
+.hero h1{font-size:clamp(49px,6.5vw,87px);font-weight:900;color:#17385d;letter-spacing:.13em;text-shadow:0 2px 0 #fff9e1,3px 5px 0 #ffe3a2,-3px -2px 0 #fffdf1,0 0 17px #fffffff2;filter:drop-shadow(0 5px 6px #42615b48);margin:15px -40px 6px;line-height:1.4}
+.hero-copy p{display:inline-block;color:#233f5c;padding:7px 17px;border-radius:20px;background:#fff9e3b8;font-size:clamp(15px,1.7vw,20px);font-weight:900;letter-spacing:.095em;margin:7px 0 18px;text-shadow:0 1px white}
+.btn{box-shadow:0 6px 12px #443e303a;border-width:3px;transition:transform .2s,filter .2s}
+.btn.primary{background:linear-gradient(180deg,#ffb84c,#e47d16);font-size:17px;padding:13px 30px}
+.btn.secondary{color:#224b6e;background:#fffaf0ee;padding:13px 26px}
+.btn:hover{filter:saturate(1.12);transform:translateY(-3px)}
+.visitor-position{margin-top:-19px}
+.visitor{max-width:1080px;margin:auto;background:#fffefcf4;border:1px solid #f1dfbf;border-radius:19px;box-shadow:0 12px 24px #273f4c24}
+.activities{padding-top:54px}
+.section-head{padding:0 5px 11px;border-bottom:2px solid #e9d9b7;margin-bottom:26px}
+.section-head h2{font-size:clamp(25px,3vw,36px)}
+.game{background:#fffef9;border:3px solid #fff;box-shadow:0 7px 18px #27465325;transition:transform .22s,box-shadow .22s}
+.game:hover{transform:translateY(-7px);box-shadow:0 15px 24px #27465334}
+.game-body{padding:18px 21px 20px}
+.game h3{font-size:clamp(22px,2.2vw,27px);letter-spacing:.06em}
+.game p{min-height:36px}
+.about{background:linear-gradient(120deg,#d6e9e2,#f3f3db)}
+@media(min-width:1260px){.hero{background-size:cover;background-position:center 49%}}
+@media(max-width:920px){.hero,.hero-inner{min-height:510px}.hero-copy{margin-top:35px;padding:15px}.hero h1{font-size:clamp(44px,7vw,70px);margin:13px 0 10px}.hero-copy p{font-size:15px}.hero{background-position:50% center}}
+@media(max-width:650px){.hero,.hero-inner{min-height:520px}.hero{background-position:54% bottom;background-size:auto 100%}.hero-copy{width:100%;margin:21px auto 0;padding:16px 0;background:linear-gradient(180deg,#fff6ddbf,#ffffffe3 65%,transparent 100%);border-radius:21px}.eyebrow{font-size:9px;letter-spacing:.13em}.hero h1{font-size:clamp(35px,9vw,52px);margin:10px 0}.hero-copy p{font-size:12px;line-height:1.8;padding:7px 8px;letter-spacing:0}.btn.primary,.btn.secondary{font-size:13px;padding:10px 14px}.visitor-position{margin-top:-10px}.visitor{padding:14px}.activities{padding-top:32px}.section-head{margin-bottom:18px}}
+@media(prefers-reduced-motion:reduce){.btn,.game{transition:none}}
